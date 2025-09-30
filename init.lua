@@ -13,7 +13,7 @@ if minetest.settings:get_bool("open_chest_support") or true then
 	})
 end
 
--- Add support for elepoer stuff.
+-- Add support for elepower stuff.
 if minetest.get_modpath("elepower_machines") then
 	hopper:add_container({
 		{"top", "elepower_machines:alloy_furnace", "dst"}, 
@@ -40,11 +40,13 @@ if minetest.get_modpath("elepower_machines") then
 		{"side", "elepower_machines:furnace", "dst"},
 		{"bottom", "elepower_machines:furnace", "src"}, 
 
-		{"top", "elepower_machines:generator", "src"}, 
-		{"side", "elepower_machines:generator", "src"}, 
+		{"top", "elepower_machines:generator", "dst"}, 
+		{"side", "elepower_machines:generator", "dst"}, 
+		{"bottom", "elepower_machines:generator", "src"},
 
-		{"top", "elepower_machines:generator_active", "src"}, 
-		{"side", "elepower_machines:generator_active", "src"}, 
+		{"top", "elepower_machines:generator_active", "dst"}, 
+		{"side", "elepower_machines:generator_active", "dst"}, 
+		{"bottom", "elepower_machines:generator_active", "src"},
 
 		{"top", "elepower_machines:grindstone", "dst"}, 
 		{"side", "elepower_machines:grindstone", "src"},
@@ -115,3 +117,4 @@ if minetest.get_modpath("pipeworks") then
 		{"side", "pipeworks:autocrafter", "src"},
 	})
 end
+
